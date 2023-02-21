@@ -21,6 +21,7 @@ function App() {
     description:""
   });
 
+
   useEffect(()=>{
     let data = localStorage.getItem("data");
     if(data != null)
@@ -127,7 +128,7 @@ function App() {
     <div className="main-container">
     <ToastContainer />
       <div className='input-container'>
-      <Typography gutterBottom variant="h5" component="div" style={{display:'flex',alignItems:"center",justifyContent:'center',marginTop:"20px"}}>Todo App</Typography>
+      <Typography gutterBottom variant="h5" component="div" style={{display:'flex',alignItems:"center",justifyContent:'center',marginTop:"20px",color:"white"}}>Todo App</Typography>
         <Box
           component="form"
           sx={{
@@ -137,10 +138,14 @@ function App() {
           autoComplete="off"
         >
           <div>
-            <TextField id="outlined-basic"  label="Enter Title" variant="outlined" onChange={(e)=>setTodo(todo=>({...todo,title:e.target.value}))} value={todo.title}/>
+            <TextField id="outlined-basic"  label="Enter Title" 
+            InputProps={{ style : { color:"white" } } }
+            InputLabelProps={{style:{color:"white"}}} variant="outlined" onChange={(e)=>setTodo(todo=>({...todo,title:e.target.value}))} value={todo.title}/>
           </div>
           <div>
-            <TextField id="outlined-basic"  label="Enter Description" variant="outlined" onChange={(e)=>setTodo(todo=>({...todo,description:e.target.value}))} value={todo.description}/>
+            <TextField id="outlined-basic"  label="Enter Description" 
+            InputProps={{ style : { color:"white" } } }
+            InputLabelProps={{style:{color:"white"}}} variant="outlined" onChange={(e)=>setTodo(todo=>({...todo,description:e.target.value}))} value={todo.description}/>
           </div>
         </Box>
         

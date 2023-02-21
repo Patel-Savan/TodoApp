@@ -1,6 +1,6 @@
 .main-container {
   height: 100vh;
-  background-color:rgb(122, 183, 216);
+  background-color:rgb(4, 49, 98);
 }
 
 .output-container{
@@ -22,4 +22,5 @@
 
 h4{
   margin : 25px; 
+  color: white;
 }
